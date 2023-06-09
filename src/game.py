@@ -3,15 +3,18 @@ from gui import GUI
 from lanes import Lane
 from lane_factory import LaneFactory
 from game_configs import *
+from time import sleep
 
 
 def main():
     gui = GUI()
 
-    gui.screen.tracer(1)
+    gui.screen.update()
 
     while True:
-        gui.lane_f.lanes[0].car1.move()
+        sleep(0.1)
+        gui.lane_f.move_cars()
+        gui.screen.update()
 
     gui.screen.exitonclick()
 
