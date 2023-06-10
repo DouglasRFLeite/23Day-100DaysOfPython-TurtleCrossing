@@ -14,6 +14,6 @@ class LaneFactory():
             print(f"y of lane {i} is: {y}")
             y += self.height_of_lane
 
-    def move_cars(self):
+    def process_frame(self):
         for lane in self.lanes:
-            lane.move_cars()
+            lane.process_frame()
